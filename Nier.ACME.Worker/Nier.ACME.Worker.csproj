@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Nier.ACME.AzureBlobStore\Nier.ACME.AzureBlobStore.csproj" />
+      <ProjectReference Include="..\Nier.ACME.Core\Nier.ACME.Core.csproj" />
+      <ProjectReference Include="..\Nier.ACME.FileSystemStore\Nier.ACME.FileSystemStore.csproj" />
+    </ItemGroup>
+
+</Project>
