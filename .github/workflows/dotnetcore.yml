@@ -1,0 +1,21 @@
+name: .NET Core
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.2.108
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+    - name: Create the package
+      run: dotnet pack --configuration Release
+    - name: Publish the package
+      run: dotnet nuget push */bin/Release/*nupkg -k ${{secrets.NUGET_KEY}}
