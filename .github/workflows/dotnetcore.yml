@@ -18,14 +18,14 @@ jobs:
     - name: Create the package
       run: dotnet pack --configuration Release
     - name: Publish Nier.ACME.Core
-      run: dotnet nuget push Nier.ACME.Core/bin/Release/*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push Nier.ACME.Core/bin/Release/*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
     - name: Publish Nier.ACME.FileSystemStore
-      run: dotnet nuget push Nier.ACME.FileSystemStore/bin/Release/*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push Nier.ACME.FileSystemStore/bin/Release/*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
     - name: Publish Nier.ACME.Worker
-      run: dotnet nuget push Nier.ACME.Worker/bin/Release/*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push Nier.ACME.Worker/bin/Release/*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
     - name: Publish Nier.ACME.AzureBlobStore
-      run: dotnet nuget push Nier.ACME.AzureBlobStore/bin/Release/*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push Nier.ACME.AzureBlobStore/bin/Release/*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
     - name: Publish Nier.ACME.AspNetCore
-      run: dotnet nuget push Nier.ACME.AspNetCore/bin/Release/*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push Nier.ACME.AspNetCore/bin/Release/*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
     - name: Publish Nier.ACME.Cli
-      run: dotnet nuget push Nier.ACME.Cli/bin/Release/*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push Nier.ACME.Cli/bin/Release/*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
